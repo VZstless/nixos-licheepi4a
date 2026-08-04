@@ -2,17 +2,17 @@
 { lib, buildUBoot, fetchFromGitHub, thead-opensbi }:
 
 (buildUBoot rec {
-  version = "2025.11.24";
+  version = "2026.05.04";
 
   src = fetchFromGitHub {
-    # https://github.com/revyos/thead-u-boot
+    # https://github.com/revyos/th1520-vendor-uboot/releases/tag/20260504
     owner = "revyos";
-    repo = "thead-u-boot";
-    rev = "0028a957e3684e6ed2a1f446034191b5120fd3ec"; # th1520 tag 20251124
-    sha256 = "sha256-FLnVSSgI2GtJBTn1WOZLLAJ2PtckAUhdVY9zzl5pf30=";
+    repo = "th1520-vendor-uboot";
+    tag = "20260504";
+    hash = "sha256-TivIrlwieZ6RZXNGyITTxxaURVReBhqul5Z+toCvfBg=";
   };
 
-  defconfig = "light_lpi4a_defconfig";
+  defconfig = "light_lpi4a_16g_defconfig";
 
   extraMeta.platforms = [ "riscv64-linux" ];
   extraMakeFlags = [
