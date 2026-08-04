@@ -86,10 +86,12 @@
     enableRedistributableFirmware = true;
 
     graphics = {
-      enable = true;
+      # mesa fails to cross-compile (clang doesn't cross-build for riscv64),
+      # and the PowerVR GPU doesn't use mesa anyway.
+      enable = false;
     };
 
-    firmware = [
+    firmware = lib.mkForce [
       pkgsKernel.light_aon_fpga
       pkgsKernel.light_c906_audio
       pkgsKernel.powervr_rogue

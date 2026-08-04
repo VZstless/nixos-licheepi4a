@@ -2,7 +2,7 @@
   description = "NixOS running on LicheePi 4A";
 
   inputs = {
-    nixpkgs.url = "github:moeleak/nixpkgs/nixos-licheepi4a-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
   outputs =
