@@ -127,7 +127,6 @@
   environment.systemPackages = with pkgs; [
     # === system ===
     # utils
-    freshfetch
     htop
     # device
     minicom
