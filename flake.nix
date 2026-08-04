@@ -34,6 +34,11 @@
         linuxPackages_thead = final.linuxPackagesFor final.linux_thead;
         powervr_rogue = final.callPackage ./pkgs/firmware/powervr_rogue.nix { };
         thead-opensbi = final.callPackage ./pkgs/opensbi { };
+
+        # bcachefs-tools fails to cross-compile for riscv64; not needed on this board.
+        bcachefs-tools = prev.runCommand "bcachefs-tools-stub" { } ''
+          mkdir -p $out/bin $out/sbin
+        '';
       };
 
       pkgsKernelCross = import nixpkgs {
