@@ -10,7 +10,7 @@ stdenv.mkDerivation {
     owner = "revyos";
     repo = "th1520-boot-firmware";
     rev = "725756411ecc20f2c2dbc5ea6b8e5aacc6f83aad"; # master on 2025-05-10
-    sha256 = "sha256-pXRdMdtqzB9ytWSqyINSsIZhymiMqZOv2Gvz6194jM0=";
+    hash = "sha256-pXRdMdtqzB9ytWSqyINSsIZhymiMqZOv2Gvz6194jM0=";
   };
 
   buildCommand = ''
