@@ -98,7 +98,7 @@
         in
         # the code here is mainly copied from:
         #   https://nixos.wiki/wiki/Linux_kernel#Embedded_Linux_Cross-compile_xconfig_and_menuconfig
-        (pkgs.buildFHSUserEnv {
+        (pkgs.buildFHSEnv {
           name = "kernel-build-env";
           targetPkgs =
             pkgs_:
